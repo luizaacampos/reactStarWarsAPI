@@ -22,3 +22,9 @@ input[type=text] {
     padding-left: 5px;
 
 }
+
+@media (max-width: 500px) {
+    .inputs {
+        flex-direction: column;
+    }
+}

@@ -51,15 +51,14 @@ export default class list extends Component {
         <div className="container">
             {people.map(person => {
                 return <div className="card" key={person.name}>
-                            <h1>{person.name}</h1>
-                            <p>Height: {person.height} cm</p>
-                            <p>Mass: {person.mass} kg</p>
-                            <p>Hair color: {person.hair_color}</p>
-                            <p>Skin color: {person.skin_color}</p>
-                            <p>Eye color: {person.eye_color}</p>
-                            <p>Birth year: {person.birth_year}</p>
-                            <p>Gender: {person.gender}</p>
-
+                            <h2>{person.name}</h2>
+                            <p><strong>Height:</strong> {person.height} cm</p>
+                            <p><strong>Mass:</strong> {person.mass} kg</p>
+                            <p><strong>Hair color:</strong> {person.hair_color}</p>
+                            <p><strong>Skin color:</strong> {person.skin_color}</p>
+                            <p><strong>Eye color:</strong> {person.eye_color}</p>
+                            <p><strong>Birth year:</strong> {person.birth_year}</p>
+                            <p><strong>Gender:</strong> {person.gender}</p>
                         </div>
             })}
         </div>

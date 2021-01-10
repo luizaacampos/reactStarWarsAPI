@@ -7,40 +7,44 @@ import logo from '../../images/logo.jpg'
 export default function Header() {
 
     const [search, setSearch] = useState('')
+    const [query, setQuery] = useState('')
 
     //useEffect(() => {
-        //axios
-        //.get(`https://swapi.dev/api//people/?search=${search}`)
-        //.then(res => {
-            //console.log(res.data)
-        //})
-    //}, [searchCharacter])
+            //const response = fetch(`https://swapi.dev/api//people/?search=${search}`)
+            //console.log(response);
+        
+     // }, [query])
 
-    function listCharacters(name) {
-        const url = `https://swapi.dev/api//people/?search=${search}`
+     useEffect(() => {
+        axios
+          .get(`https://swapi.dev/api//people/?search=${query}`)
+          .then(res => {
+            //setCategories(res.data.trivia_categories)
+            console.log(res)
+          })
+      }, [query])
 
-        const res = fetch(url)
-                    .then(res => res.json())
-                    .then(res => {
-                        console.log(res)
-                    })
+    const updateSearch = e => {
+        setSearch(e.target.value)
+        console.log(search);
     }
-
-    function searchCharacter() {
-        let search = document.getElementById('search').value
-        if (search !== '') {
-            listCharacters(search)
-        }
+    
+    const getSearch = e => {
+        e.preventDefault()
+        setQuery(search)
+        console.log(query)
+    
+        //setSearch('')
     }
     
     return (
         <div>
            <header>
                 <img src={logo} alt="Stars Wars" />
-                <div className="inputs">
-                    <input id="search" type="text" placeholder="Pesquise aqui por um personagem" />
-                    <input className="btn" type='submit' value="Pesquisar" onClick={searchCharacter} />
-                </div>
+                <form onSubmit={getSearch} className="inputs">
+                    <input id="search" type="text" placeholder="Pesquise aqui por um personagem" onChange={updateSearch} />
+                    <input className="btn" type='submit' value="Pesquisar" />
+                </form>
            </header> 
         </div>
     )

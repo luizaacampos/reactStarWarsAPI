@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 html {
     background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg');
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn {
@@ -24,4 +27,28 @@ html {
 
 .btn:disabled:hover {
     background-color: #d19c08;
+}
+
+footer {
+    height: 50px;
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    text-align: center;
+    font-size: 20px;
+    color: #ad8207;
+    margin: 10px;
+}
+
+footer a {
+    color: #ad8207;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 30px;
 }
