@@ -34,6 +34,30 @@
     justify-content: space-evenly;
 }
 
+.btn {
+    width: 80px;
+    height: 30px;
+    background-color: #d19c08;
+    color: #1b1c1e;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ad8207;
+}
+
+.btn:disabled {
+    opacity: .2;
+    cursor: default;
+}
+
+.btn:disabled:hover {
+    background-color: #d19c08;
+}
+
 @media (max-width: 500px) {
     .container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
