@@ -17,6 +17,66 @@ img {
     width: 250px;
 }
 
+.container {
+    margin: 25px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    background-color: #1f1f1f;
+    padding: 10px;
+    margin: 10px;
+    border: 15px solid #1b1c1e;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 45px;
+    color: #ad8207;
+    margin: 10px;
+}
+
+.card p {
+    color: #d19c08;
+    margin: 10px;
+}
+
+.btn-container {
+    display: flex;
+    padding: 15px 60px;
+    justify-content: space-evenly;
+}
+
+.btn {
+    width: 80px;
+    height: 30px;
+    background-color: #d19c08;
+    color: #1b1c1e;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ad8207;
+}
+
+.btn:disabled {
+    opacity: .2;
+    cursor: default;
+}
+
+.btn:disabled:hover {
+    background-color: #d19c08;
+}
+
 footer {
     height: 50px;
     background-color: transparent;
@@ -39,4 +99,42 @@ footer a {
     text-decoration: none;
     margin: 5px;
     font-size: 30px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .card {
+        width: 200px;
+    }
+
+    .card h2 {
+        font-size: 30px;
+    }
+    
+    .card p {
+       font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .card {
+        width: 180px;
+    }
 }
