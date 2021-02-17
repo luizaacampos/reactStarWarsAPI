@@ -17,6 +17,47 @@ img {
     width: 250px;
 }
 
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+}
+
+.SearchBtn {
+    width: 35px;
+    height: 35px;
+    padding: 0 10px;
+    background-color: #d19c08;
+    color: #1b1c1e;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.SearchBtn:hover {
+    background-color: #ad8207;
+}
+
+span {
+    color: #d19c08;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+span:hover {
+    text-decoration: underline;
+}
+
 .container {
     margin: 25px 50px;
     display: grid;
