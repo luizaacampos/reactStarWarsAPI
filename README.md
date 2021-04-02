@@ -1,4 +1,4 @@
-<h1 align="center">🪐 Star Wars - Guia de personagens 🖖🏻</h1>
+<h1 align="center">🪐 Star Wars - Guia de personagens 🪐</h1>
 
 <p>Aplicação com guia de todos os personagens da saga Star Wars e suas características. A página mostra um card com informações para cada personagem organizados em 9 páginas diferentes.</p>
 <p>O usuário também pode realizar buscas a partir do nome do personagem.</p>
